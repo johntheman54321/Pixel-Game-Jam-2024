@@ -1,1 +1,7 @@
 res://Scenes/main.tscn
+res://Scenes/main_menu/main_menu.gd
+res://Scenes/main_menu/main_menu.tscn
+res://Scenes/MapSelection/map_selection.tscn
+res://Scenes/map_selection/map_selection.tscn
+res://default_bus_layout.tres
+res://Scenes/map_selection/map_selection.gd

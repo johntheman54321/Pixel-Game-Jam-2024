@@ -1,0 +1,117 @@
+[gd_scene load_steps=7 format=3 uid="uid://s8bm2krcjn1b"]
+
+[ext_resource type="Script" path="res://Scenes/main_menu/main_menu.gd" id="1_okp7i"]
+[ext_resource type="FontFile" uid="uid://b2ujavy03cxpx" path="res://Fonts/Minecraftia-Regular.ttf" id="2_77myy"]
+
+[sub_resource type="Animation" id="Animation_gcog1"]
+resource_name = "Fade In"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3ef44"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vnu53"]
+resource_name = "Fade Out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0xd17"]
+_data = {
+"Fade In": SubResource("Animation_gcog1"),
+"Fade Out": SubResource("Animation_vnu53"),
+"RESET": SubResource("Animation_3ef44")
+}
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_okp7i")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 184.0
+offset_right = 896.0
+offset_bottom = 367.0
+theme_override_colors/font_color = Color(0, 0.463408, 0.569605, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_77myy")
+theme_override_font_sizes/font_size = 100
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 432.0
+offset_right = 896.0
+offset_bottom = 577.0
+theme_override_colors/font_color = Color(0, 0.463408, 0.569605, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_77myy")
+theme_override_font_sizes/font_size = 100
+text = "Quit"
+
+[node name="Title" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0, 0.748136, 0.913787, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_77myy")
+theme_override_font_sizes/font_size = 100
+text = "AQUARUN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0xd17")
+}
+autoplay = "Fade In"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

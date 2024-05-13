@@ -11,10 +11,21 @@ config_version=5
 [application]
 
 config/name="Pixel Game Jam 2024"
+run/main_scene="res://Scenes/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://Music/default_bus_layout.tres"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 1, 1, 1)

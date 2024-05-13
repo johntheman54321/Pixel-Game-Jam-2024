@@ -1,0 +1,129 @@
+[gd_scene load_steps=7 format=3 uid="uid://ce2jro1mwr04s"]
+
+[ext_resource type="Script" path="res://Scenes/map_selection/map_selection.gd" id="1_77iun"]
+[ext_resource type="FontFile" uid="uid://b2ujavy03cxpx" path="res://Fonts/Minecraftia-Regular.ttf" id="1_ogesc"]
+
+[sub_resource type="Animation" id="Animation_7veqb"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_c6gxk"]
+resource_name = "Fade Out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_q1ys4"]
+resource_name = "Fade In"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wtgx0"]
+_data = {
+"Fade In": SubResource("Animation_q1ys4"),
+"Fade Out": SubResource("Animation_c6gxk"),
+"RESET": SubResource("Animation_7veqb")
+}
+
+[node name="MapSelection" type="Node2D"]
+script = ExtResource("1_77iun")
+
+[node name="Title" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0, 0.748136, 0.913787, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_ogesc")
+theme_override_font_sizes/font_size = 100
+text = "Speedrun  Maps"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 272.0
+offset_right = 1152.0
+offset_bottom = 552.0
+
+[node name="Map1" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 48.0
+offset_right = 320.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0, 0.462745, 0.568627, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_ogesc")
+theme_override_font_sizes/font_size = 60
+text = "MAP 1"
+
+[node name="Map2" type="Button" parent="Control"]
+offset_left = 448.0
+offset_top = 48.0
+offset_right = 704.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0, 0.462745, 0.568627, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_ogesc")
+theme_override_font_sizes/font_size = 60
+text = "MAP 2"
+
+[node name="Map3" type="Button" parent="Control"]
+offset_left = 832.0
+offset_top = 48.0
+offset_right = 1088.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0, 0.462745, 0.568627, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_ogesc")
+theme_override_font_sizes/font_size = 60
+text = "MAP 3"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wtgx0")
+}
+autoplay = "Fade In"
+
+[connection signal="pressed" from="Control/Map1" to="." method="play_fade_out"]
+[connection signal="pressed" from="Control/Map1" to="." method="_on_map_1_pressed"]
+[connection signal="pressed" from="Control/Map2" to="." method="play_fade_out"]
+[connection signal="pressed" from="Control/Map2" to="." method="_on_map_2_pressed"]
+[connection signal="pressed" from="Control/Map3" to="." method="_on_map_3_pressed"]
+[connection signal="pressed" from="Control/Map3" to="." method="play_fade_out"]
