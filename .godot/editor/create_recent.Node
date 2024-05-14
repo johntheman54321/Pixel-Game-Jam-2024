@@ -1,7 +1,9 @@
+Marker2D
+Sprite2D
+CharacterBody2D
 AnimationPlayer
 ColorRect
 CanvasLayer
-Sprite2D
 Label
 Button
 Control
