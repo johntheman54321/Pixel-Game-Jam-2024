@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715635092
+::res://::1715655505
 ::res://Fonts/::1715570118
 Minecraftia-Regular.ttf::FontFile::4323354611175136865::1715570118::1715570118::1::::<><>::
 ::res://Music/::1715572024
@@ -11,11 +11,16 @@ main_menu.tscn::PackedScene::1331607232242123313::1715575769::0::1::::<><>::res:
 ::res://Scenes/map_selection/::1715575813
 map_selection.gd::GDScript::-1::1715575813::0::1::::<>Node2D<>::
 map_selection.tscn::PackedScene::5109912528796366392::1715575813::0::1::::<><>::res://Scenes/map_selection/map_selection.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf
-::res://Scenes/Player/::1715629931
-Player.gd::GDScript::-1::1715629823::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::3197530680240593665::1715629931::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://bhv55rvr4a5gk::::res://Sprites/icon.svg
+::res://Scenes/Player/::1715655010
+Player.gd::GDScript::-1::1715655010::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::3197530680240593665::1715655010::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://bq12rr8w7jkea::::res://Sprites/Player/Man Arrow Trash.png
 ::res://SFX/::1715572033
 default_bus_layout.tres::AudioBusLayout::4425814939177802073::1715572031::0::1::::<><>::
-::res://Sprites/::1715635099
+::res://Sprites/::1715655010
 icon.svg::CompressedTexture2D::2922970531743759870::1715466223::1715570000::1::::<><>::
-Man Arrow Trash.png::CompressedTexture2D::3564786665726456824::1715635099::1715635100::1::::<><>::
+::res://Sprites/Player/::1715655011
+Man Arrow Trash.png::CompressedTexture2D::3564786665726456824::1715635099::1715655011::1::::<><>::
+::res://Sprites/Underwater/::1715655505
+::res://Sprites/Underwater/Submarine/::1715655505
+Submarine Idle.png::CompressedTexture2D::5866884513206346596::1715655031::1715655505::1::::<><>::
+Submarine opening.png::CompressedTexture2D::7153588905531189557::1715655496::1715655505::1::::<><>::

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bls54l12a8eaj"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Player.gd" id="1_n03ss"]
-[ext_resource type="Texture2D" uid="uid://bq12rr8w7jkea" path="res://Sprites/Man Arrow Trash.png" id="2_1nhjq"]
+[ext_resource type="Texture2D" uid="uid://bq12rr8w7jkea" path="res://Sprites/Player/Man Arrow Trash.png" id="2_1nhjq"]
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(8, 8)
@@ -12,5 +12,7 @@ texture_filter = 1
 rotation = 1.5708
 texture = ExtResource("2_1nhjq")
 
-[node name="look_at_angle" type="Marker2D" parent="."]
-position = Vector2(136, 0)
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
+limit_smoothed = true
+position_smoothing_enabled = true
