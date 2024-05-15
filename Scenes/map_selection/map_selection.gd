@@ -11,16 +11,17 @@ func _ready():
 func _process(delta):
 	print(animation_player.current_animation)
 
-func play_fade_out():
+func play_fade_out(map_switch):
 	animation_player.play("Fade Out")
 	await get_tree().create_timer(1.2).timeout
 	RenderingServer.set_default_clear_color(Color(0,0,0))
+	get_tree().change_scene_to_file("res://Scenes/Maps/Map " + str(map_switch) + "/map_" + str(map_switch) + ".tscn")
 	print(map_switch)
 
 
 
 func _on_map_1_pressed():
-	map_switch = "1"
+	play_fade_out(1)
 
 
 func _on_map_2_pressed():

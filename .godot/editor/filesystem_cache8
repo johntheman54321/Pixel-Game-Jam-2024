@@ -1,25 +1,35 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715655505
+::res://::1715812019
 ::res://Fonts/::1715570118
 Minecraftia-Regular.ttf::FontFile::4323354611175136865::1715570118::1715570118::1::::<><>::
 ::res://Music/::1715572024
 default_bus_layout.tres::AudioBusLayout::2143344979913753238::1715572019::0::1::::<><>::
-::res://Scenes/::1715629517
+::res://Scenes/::1715803129
 ::res://Scenes/main_menu/::1715575769
 main_menu.gd::GDScript::-1::1715575682::0::1::::<>Node2D<>::
 main_menu.tscn::PackedScene::1331607232242123313::1715575769::0::1::::<><>::res://Scenes/main_menu/main_menu.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf
-::res://Scenes/map_selection/::1715575813
-map_selection.gd::GDScript::-1::1715575813::0::1::::<>Node2D<>::
-map_selection.tscn::PackedScene::5109912528796366392::1715575813::0::1::::<><>::res://Scenes/map_selection/map_selection.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf
-::res://Scenes/Player/::1715655010
-Player.gd::GDScript::-1::1715655010::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::3197530680240593665::1715655010::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://bq12rr8w7jkea::::res://Sprites/Player/Man Arrow Trash.png
+::res://Scenes/Maps/::1715804839
+map_script.gd::GDScript::-1::1715804839::0::1::::<>Node2D<>::
+::res://Scenes/Maps/Map 1/::1715806142
+map_1.tscn::PackedScene::4750496587542808487::1715806142::0::1::::<><>::uid://bls54l12a8eaj::::res://Scenes/Player/player.tscn<>res://Scenes/Maps/map_script.gd<>uid://bm2200vbxn7gg::::res://Scenes/underwater/submarine/submarine.tscn<>uid://djqgyq21w67as::::res://Sprites/Tilemap/Underwater Block 32x32.png
+::res://Scenes/map_selection/::1715806142
+map_selection.gd::GDScript::-1::1715804805::0::1::::<>Node2D<>::
+map_selection.tscn::PackedScene::5109912528796366392::1715806142::0::1::::<><>::res://Scenes/map_selection/map_selection.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf
+::res://Scenes/Player/::1715805952
+Player.gd::GDScript::-1::1715803346::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::3197530680240593665::1715805952::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://bq12rr8w7jkea::::res://Sprites/Player/Man Arrow Trash.png
+::res://Scenes/underwater/::1715655685
+::res://Scenes/underwater/submarine/::1715806168
+submarine.gd::GDScript::-1::1715803236::0::1::::<>StaticBody2D<>::
+submarine.tscn::PackedScene::3286110355962786186::1715806168::0::1::::<><>::res://Scenes/underwater/submarine/submarine.gd<>uid://cpt7y31ggxv3a::::res://Sprites/Underwater/Submarine/Submarine Idle.png<>uid://c86itgeidxwsr::::res://Sprites/Underwater/Submarine/Submarine opening.png
 ::res://SFX/::1715572033
 default_bus_layout.tres::AudioBusLayout::4425814939177802073::1715572031::0::1::::<><>::
-::res://Sprites/::1715655010
+::res://Sprites/::1715803577
 icon.svg::CompressedTexture2D::2922970531743759870::1715466223::1715570000::1::::<><>::
 ::res://Sprites/Player/::1715655011
 Man Arrow Trash.png::CompressedTexture2D::3564786665726456824::1715635099::1715655011::1::::<><>::
+::res://Sprites/Tilemap/::1715803676
+Underwater Block 32x32.png::CompressedTexture2D::7824399732192164714::1715803676::1715803676::1::::<><>::
 ::res://Sprites/Underwater/::1715655505
 ::res://Sprites/Underwater/Submarine/::1715655505
 Submarine Idle.png::CompressedTexture2D::5866884513206346596::1715655031::1715655505::1::::<><>::
