@@ -3,5 +3,3 @@ res://Scenes/map_selection/map_selection.tscn
 res://Scenes/underwater/submarine/submarine.tscn
 res://Scenes/underwater/Speed Boost/speed_boost.tscn
 res://Scenes/Player/player.tscn
-res://Scenes/Player/Player.gd
-res://Scenes/Maps/map_script.gd
