@@ -7,5 +7,6 @@ extends StaticBody2D
 func _on_area_2d_body_entered(body):
 	if body is Player:
 		print("player enter")
-	$"../Timer".stop()
-	player.moving = false
+		$"../Timer".stop()
+		player.moving = false
+		world.animation_player.play("EnterSubmarine")

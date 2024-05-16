@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var player = $Player
+@onready var animation_player = $AnimationPlayer
+
 
 func _ready():
 	RenderingServer.set_default_clear_color(Color(0,1,1))
@@ -14,4 +16,4 @@ func _on_button_pressed():
 
 
 func _on_button_2_pressed():
-	player.animation_player.play("enter submarine")
+	pass

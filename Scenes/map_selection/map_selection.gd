@@ -9,7 +9,7 @@ func _ready():
 	animation_player.play("Fade In")
 
 func _process(delta):
-	print(animation_player.current_animation)
+	pass
 
 func play_fade_out(map_switch):
 	animation_player.play("Fade Out")

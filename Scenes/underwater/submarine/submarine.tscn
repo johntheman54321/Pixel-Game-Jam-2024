@@ -160,7 +160,6 @@ script = ExtResource("1_3sata")
 sprite_frames = SubResource("SpriteFrames_jl02t")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.307806
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -171,4 +170,5 @@ shape = SubResource("RectangleShape2D_y3ei4")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(12.6667, -5.66667, 14.3333, -4.33333, 15, 1.33333, 14.6667, 12, 10, 12.3333, 6.33333, 9.33333, 3.66667, 11, -7.33333, 11.3333, -13.3333, 8, -15, 5, -14.6667, 2, -12, -2, -7, -3, -5.66667, -7, -4.33333, -8.66667, 1, -8.66667, 2, -7, 2, -4, 2.66667, -3.33333, 5.66667, -2.66667, 7.66667, -2.66667, 9, -3.66667, 10.6667, -4.33333)
 
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
