@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ep6gvg5gru8h"]
+
+[ext_resource type="Texture2D" uid="uid://djqgyq21w67as" path="res://Sprites/Tilemap/Underwater Block 32x32.png" id="1_84r0g"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="UnderwaterBlock32x32" type="Sprite2D" parent="."]
+position = Vector2(192, 552)
+texture = ExtResource("1_84r0g")

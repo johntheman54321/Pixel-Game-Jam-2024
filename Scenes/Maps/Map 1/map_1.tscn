@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b8xf8qmikl528"]
+[gd_scene load_steps=23 format=3 uid="uid://b8xf8qmikl528"]
 
 [ext_resource type="PackedScene" uid="uid://bls54l12a8eaj" path="res://Scenes/Player/player.tscn" id="1_euj3i"]
 [ext_resource type="Script" path="res://Scenes/Maps/map_script.gd" id="1_g7psw"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://djqgyq21w67as" path="res://Sprites/Tilemap/Underwater Block 32x32.png" id="4_bqh6k"]
 [ext_resource type="Script" path="res://Scenes/Maps/Timer.gd" id="5_ajvbk"]
 [ext_resource type="Texture2D" uid="uid://ceofif7c4vf5q" path="res://Sprites/UI/Countdwon Aquarun.png" id="5_d6exy"]
+[ext_resource type="PackedScene" uid="uid://b8gw3jsqskbb2" path="res://Scenes/underwater/Speed Boost/speed_boost.tscn" id="8_svaa4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i6tnc"]
 texture = ExtResource("4_bqh6k")
@@ -226,6 +227,14 @@ libraries = {
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 script = ExtResource("5_ajvbk")
+
+[node name="objects" type="Node2D" parent="."]
+
+[node name="Speed boost" parent="objects" instance=ExtResource("8_svaa4")]
+position = Vector2(136, 240)
+
+[node name="speedtimer" type="Timer" parent="objects/Speed boost"]
+wait_time = 5.0
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
