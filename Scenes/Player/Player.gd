@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
+@onready var animation_player = $AnimationPlayer
 @onready var player = $"."
 @export var speed = 400
 var moving = true

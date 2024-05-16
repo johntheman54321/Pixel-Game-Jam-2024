@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bq12rr8w7jkea" path="res://Sprites/Player/Man Arrow Trash.png" id="2_1nhjq"]
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(0, 40)
 scale = Vector2(8, 8)
 script = ExtResource("1_n03ss")
 
