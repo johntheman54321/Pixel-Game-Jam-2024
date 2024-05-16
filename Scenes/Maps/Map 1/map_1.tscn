@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8xf8qmikl528"]
+[gd_scene load_steps=11 format=3 uid="uid://b8xf8qmikl528"]
 
 [ext_resource type="PackedScene" uid="uid://bls54l12a8eaj" path="res://Scenes/Player/player.tscn" id="1_euj3i"]
 [ext_resource type="Script" path="res://Scenes/Maps/map_script.gd" id="1_g7psw"]
 [ext_resource type="PackedScene" uid="uid://bm2200vbxn7gg" path="res://Scenes/underwater/submarine/submarine.tscn" id="2_fb5di"]
 [ext_resource type="Texture2D" uid="uid://djqgyq21w67as" path="res://Sprites/Tilemap/Underwater Block 32x32.png" id="4_bqh6k"]
+[ext_resource type="PackedScene" uid="uid://b8gw3jsqskbb2" path="res://Scenes/underwater/Speed Boost/speed_boost.tscn" id="5_gfax3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i6tnc"]
 texture = ExtResource("4_bqh6k")
@@ -96,5 +97,8 @@ autoplay = "Fade In"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
+
+[node name="Speed boost" parent="." instance=ExtResource("5_gfax3")]
+position = Vector2(232, 144)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
