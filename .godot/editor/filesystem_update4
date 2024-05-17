@@ -1,7 +1,11 @@
 res://Scenes/Maps/Map 1/map_1.tscn
+res://Scenes/Player/Player.gd
 res://Scenes/map_selection/map_selection.tscn
 res://Scenes/underwater/submarine/submarine.tscn
 res://Scenes/underwater/Speed Boost/speed_boost.tscn
 res://Scenes/Player/player.tscn
 res://map2.tscn
-res://Scenes/Player/Player.gd
+res://Scenes/Maps/map_script.gd
+res://Scenes/underwater/submarine/submarine.gd
+res://Scenes/map_selection/map_selection.gd
+res://Scenes/Maps/Timer.gd

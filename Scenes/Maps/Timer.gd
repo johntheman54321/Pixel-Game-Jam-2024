@@ -25,7 +25,6 @@ func start_3():
 			$"../SFX/start".pitch_scale = 0.15
 			$"../SFX/start".play()
 		player.moving = false
-		print(n)
 		await get_tree().create_timer(1).timeout
 		if n == 4:
 			$".".start()

@@ -149,7 +149,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3ei4"]
-size = Vector2(8, 5.33333)
+size = Vector2(33.3333, 5.33333)
 
 [node name="Submarine" type="StaticBody2D"]
 texture_filter = 1
@@ -164,7 +164,7 @@ autoplay = "Idle"
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1.33333, -10.6667)
+position = Vector2(-0.333333, -10.6667)
 shape = SubResource("RectangleShape2D_y3ei4")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

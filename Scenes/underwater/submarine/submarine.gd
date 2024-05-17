@@ -10,3 +10,7 @@ func _on_area_2d_body_entered(body):
 		$"../Timer".stop()
 		player.moving = false
 		world.animation_player.play("EnterSubmarine")
+		player.dir = Vector2(0, 1)
+		await get_tree().create_timer(1.5).timeout
+		world.animation_player.play("Fade out")
+		print("done")

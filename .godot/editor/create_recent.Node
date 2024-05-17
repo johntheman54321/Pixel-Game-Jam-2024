@@ -1,9 +1,9 @@
+CollisionShape2D
 RayCast2D
 Area2D
 Node2D
 TileMap
 Timer
-CollisionShape2D
 Sprite2D
 Node
 Button
@@ -12,4 +12,3 @@ AudioStreamPlayer
 AnimatedSprite2D
 Label
 CollisionPolygon2D
-Marker2D
