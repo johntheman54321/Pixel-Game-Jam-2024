@@ -1,7 +1,10 @@
 extends Node2D
 
 @onready var player = $Player
-@onready var animation_player = $AnimationPlayer
+@onready var animation_player = $AnimataionPlayer
+@onready var speedtimer = $objects/speedboosts/speedtimer
+
+
 
 
 func _ready():
@@ -17,3 +20,8 @@ func _on_button_pressed():
 
 func _on_button_2_pressed():
 	pass
+
+
+func _on_speedtimer_timeout():
+	player.speed = 400
+	print("pee")

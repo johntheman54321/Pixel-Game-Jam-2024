@@ -1,9 +1,9 @@
+Area2D
+Node2D
 TileMap
 Timer
 CollisionShape2D
-Area2D
 Sprite2D
-Node2D
 Node
 Button
 AnimationPlayer

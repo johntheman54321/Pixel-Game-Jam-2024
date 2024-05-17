@@ -124,7 +124,7 @@ libraries = {
 autoplay = "Fade In"
 
 [connection signal="pressed" from="Control/Map1" to="." method="_on_map_1_pressed"]
-[connection signal="pressed" from="Control/Map2" to="." method="_on_map_2_pressed"]
 [connection signal="pressed" from="Control/Map2" to="." method="play_fade_out"]
+[connection signal="pressed" from="Control/Map2" to="." method="_on_map_2_pressed"]
 [connection signal="pressed" from="Control/Map3" to="." method="play_fade_out"]
 [connection signal="pressed" from="Control/Map3" to="." method="_on_map_3_pressed"]
