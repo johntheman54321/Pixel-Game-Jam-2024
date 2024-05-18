@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715985382
-map2.tscn::PackedScene::313615096033168609::1715984734::0::1::::<><>::
+::res://::1716005942
+global.gd::GDScript::-1::1716005942::0::1::::<>Node<>::
 ::res://Fonts/::1715570118
 Minecraftia-Regular.ttf::FontFile::4323354611175136865::1715570118::1715570118::1::::<><>::
 ::res://Music/::1715572024
@@ -9,36 +9,40 @@ default_bus_layout.tres::AudioBusLayout::2143344979913753238::1715572019::0::1::
 ::res://Scenes/main_menu/::1715575769
 main_menu.gd::GDScript::-1::1715575682::0::1::::<>Node2D<>::
 main_menu.tscn::PackedScene::1331607232242123313::1715575769::0::1::::<><>::res://Scenes/main_menu/main_menu.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf
-::res://Scenes/Maps/::1715985382
-map_script.gd::GDScript::-1::1715984733::0::1::::<>Node2D<>::
+::res://Scenes/Maps/::1716005764
+map_script.gd::GDScript::-1::1716005764::0::1::::<>Node2D<>::
 Timer.gd::GDScript::-1::1715984918::0::1::::<>Timer<>::
-::res://Scenes/Maps/Map 1/::1715985382
-map_1.tscn::PackedScene::4750496587542808487::1715985269::0::1::::<><>::uid://bls54l12a8eaj::::res://Scenes/Player/player.tscn<>res://Scenes/Maps/map_script.gd<>uid://dmi162xl4ln4h::::res://SFX/start-13691.mp3<>uid://bm2200vbxn7gg::::res://Scenes/underwater/submarine/submarine.tscn<>uid://djqgyq21w67as::::res://Sprites/Tilemap/Underwater Block 32x32.png<>res://Scenes/Maps/Timer.gd<>uid://ceofif7c4vf5q::::res://Sprites/UI/Countdwon Aquarun.png<>uid://b8gw3jsqskbb2::::res://Scenes/underwater/Speed Boost/speed_boost.tscn
-::res://Scenes/Maps/Map 2/::1715985375
-::res://Scenes/map_selection/::1715985270
+::res://Scenes/Maps/Map 1/::1716006018
+map_1.tscn::PackedScene::4750496587542808487::1716006018::0::1::::<><>::uid://bls54l12a8eaj::::res://Scenes/Player/player.tscn<>res://Scenes/Maps/map_script.gd<>uid://dmi162xl4ln4h::::res://SFX/start-13691.mp3<>uid://bm2200vbxn7gg::::res://Scenes/underwater/submarine/submarine.tscn<>uid://djqgyq21w67as::::res://Sprites/Tilemap/Underwater Block 32x32.png<>res://Scenes/Maps/Timer.gd<>uid://ceofif7c4vf5q::::res://Sprites/UI/Countdwon Aquarun.png<>uid://b8gw3jsqskbb2::::res://Scenes/underwater/Speed Boost/speed_boost.tscn
+::res://Scenes/Maps/Map 2/::1715985391
+map2.tscn::PackedScene::313615096033168609::1715984734::0::1::::<><>::
+::res://Scenes/map_selection/::1716005367
 map_selection.gd::GDScript::-1::1715984678::0::1::::<>Node2D<>::
-map_selection.tscn::PackedScene::5109912528796366392::1715985269::0::1::::<><>::res://Scenes/map_selection/map_selection.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf
-::res://Scenes/Player/::1715985270
-Player.gd::GDScript::-1::1715985269::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::3197530680240593665::1715985270::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://bq12rr8w7jkea::::res://Sprites/Player/Man Arrow Trash.png
+map_selection.tscn::PackedScene::5109912528796366392::1716005367::0::1::::<><>::res://Scenes/map_selection/map_selection.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf
+::res://Scenes/Player/::1716005367
+Player.gd::GDScript::-1::1715985559::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::3197530680240593665::1716005367::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://bq12rr8w7jkea::::res://Sprites/Player/Man Arrow Trash.png
 ::res://Scenes/underwater/::1715822345
-::res://Scenes/underwater/Speed Boost/::1715985270
+::res://Scenes/underwater/Speed Boost/::1716005367
 Speed boost.gd::GDScript::-1::1715914214::0::1::::<>Node2D<>::
-speed_boost.tscn::PackedScene::4716425067610773553::1715985270::0::1::::<><>::res://Scenes/underwater/Speed Boost/Speed boost.gd<>uid://bhv55rvr4a5gk::::res://Sprites/icon.svg
-::res://Scenes/underwater/submarine/::1715985321
-submarine.gd::GDScript::-1::1715985321::0::1::::<>StaticBody2D<>::
-submarine.tscn::PackedScene::3286110355962786186::1715985321::0::1::::<><>::res://Scenes/underwater/submarine/submarine.gd<>uid://cpt7y31ggxv3a::::res://Sprites/Underwater/Submarine/Submarine Idle.png<>uid://c86itgeidxwsr::::res://Sprites/Underwater/Submarine/Submarine opening.png
+speed_boost.tscn::PackedScene::4716425067610773553::1716005367::0::1::::<><>::res://Scenes/underwater/Speed Boost/Speed boost.gd<>uid://xsl1oc31jr1x::::res://Sprites/Objects/speed pick up trash.png
+::res://Scenes/underwater/submarine/::1716006013
+submarine.gd::GDScript::-1::1716005759::0::1::::<>StaticBody2D<>::
+submarine.tscn::PackedScene::3286110355962786186::1716006013::0::1::::<><>::res://Scenes/underwater/submarine/submarine.gd<>uid://cpt7y31ggxv3a::::res://Sprites/Underwater/Submarine/Submarine Idle.png<>uid://c86itgeidxwsr::::res://Sprites/Underwater/Submarine/Submarine opening.png
 ::res://SFX/::1715828461
 default_bus_layout.tres::AudioBusLayout::4425814939177802073::1715572031::0::1::::<><>::
 start-13691.mp3::AudioStreamMP3::8019678652391097053::1715828461::1715828461::1::::<><>::
-::res://Sprites/::1715977221
+::res://Sprites/::1716005031
 icon.svg::CompressedTexture2D::2922970531743759870::1715466223::1715977221::1::::<><>::
+::res://Sprites/Objects/::1716005054
+speed pick up trash.png::CompressedTexture2D::1652217260533600951::1716005054::1716005054::1::::<><>::
 ::res://Sprites/Player/::1715655011
 Man Arrow Trash.png::CompressedTexture2D::3564786665726456824::1715635099::1715655011::1::::<><>::
 ::res://Sprites/Tilemap/::1715803676
 Underwater Block 32x32.png::CompressedTexture2D::7824399732192164714::1715803676::1715803676::1::::<><>::
-::res://Sprites/UI/::1715827752
+::res://Sprites/UI/::1716006404
 Countdwon Aquarun.png::CompressedTexture2D::5082816213991188824::1715827752::1715827752::1::::<><>::
+Speed Trash.png::CompressedTexture2D::2039209556358655716::1716006404::1716006404::1::::<><>::
 ::res://Sprites/Underwater/::1715655505
 ::res://Sprites/Underwater/Submarine/::1715655505
 Submarine Idle.png::CompressedTexture2D::5866884513206346596::1715655031::1715655505::1::::<><>::

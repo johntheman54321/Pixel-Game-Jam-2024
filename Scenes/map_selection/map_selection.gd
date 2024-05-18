@@ -7,9 +7,12 @@ var map_switch : String
 func _ready():
 	RenderingServer.set_default_clear_color(Color(0,1,1))
 	animation_player.play("Fade In")
+	print(str(Global.map1_highscore) + "NONONO")
 
 func _process(delta):
-	pass
+	if Global.map1_highscore != 0:
+		$Control/Map1/Highscore.text = "Highscore
+			" + Global.map1_highscore_text
 
 func play_fade_out(map_switch):
 	animation_player.play("Fade Out")

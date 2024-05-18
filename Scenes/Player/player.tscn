@@ -28,3 +28,19 @@ disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_tu8jo")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -3.0
+offset_top = -11.0
+offset_right = 757.0
+offset_bottom = 296.0
+scale = Vector2(0.02, 0.02)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "10"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

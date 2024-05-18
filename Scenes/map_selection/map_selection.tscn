@@ -79,6 +79,14 @@ theme_override_fonts/font = ExtResource("1_ogesc")
 theme_override_font_sizes/font_size = 60
 text = "MAP 1"
 
+[node name="Highscore" type="Label" parent="Control/Map1"]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 9.0
+offset_bottom = 154.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+
 [node name="Map2" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 448.0

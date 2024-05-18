@@ -4,10 +4,12 @@ extends Timer
 @onready var time_sec = 00
 @onready var time_min = 00
 @onready var player = $"../Player"
+var current_map : int
 
 
 func _ready():
 	start_3()
+	current_map = $"..".current_map
 
 func _process(delta):
 	$"../CanvasLayer/Label".text = str(time_min) + ":" + str(time_sec) + ":" + str(time_mil)
@@ -41,3 +43,8 @@ func _on_timeout():
 	if time_sec == 60:
 		time_sec = 0
 		time_min += 1
+
+func check_score():
+	var total_time = (time_min*60)+(time_sec)+(time_mil*0.1)
+	var text = str(time_min) + ":" + str(time_sec) + ":" + str(time_mil)
+	return [text, total_time]
