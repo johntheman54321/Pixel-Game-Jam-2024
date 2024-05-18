@@ -2,6 +2,10 @@ extends Node2D
 
 var button_pressed = false
 
+func _process(delta):
+	Global.player_name = $LineEdit.text
+
+
 func _on_play_pressed():
 	if button_pressed == false:
 		$AnimationPlayer.play("Fade Out")

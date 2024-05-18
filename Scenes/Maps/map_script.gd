@@ -5,16 +5,12 @@ extends Node2D
 @onready var speedtimer = $objects/speedboosts/speedtimer
 @onready var speed_ui = $CanvasLayer/SpeedTimer
 @export var animation_player : AnimationPlayer
-@export var player_spawn = false
-@export var initial_pos : Vector2
 @export var current_map : int
 
 
 
 
 func _ready():
-	if player_spawn:
-		$Player.position = initial_pos
 	RenderingServer.set_default_clear_color(Color(0,1,1))
 	
 func _process(delta):

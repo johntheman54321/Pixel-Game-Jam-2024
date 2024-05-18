@@ -1,3 +1,6 @@
+CanvasLayer
+LineEdit
+Button
 Label
 RichTextLabel
 Timer
@@ -9,6 +12,4 @@ ProgressBar
 RayCast2D
 TileMap
 Node
-Button
 AnimationPlayer
-AudioStreamPlayer

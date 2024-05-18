@@ -165,7 +165,6 @@ script = ExtResource("1_g7psw")
 player = NodePath("Player")
 score_timer = NodePath("Timer")
 animation_player = NodePath("AnimationPlayer")
-initial_pos = Vector2(200, -64)
 current_map = 1
 
 [node name="SFX" type="Node2D" parent="."]
@@ -175,10 +174,11 @@ stream = ExtResource("2_6mxnk")
 pitch_scale = 0.38
 
 [node name="Player" parent="." instance=ExtResource("1_euj3i")]
-position = Vector2(10489, 185)
+position = Vector2(10669, 166)
 scale = Vector2(4, 4)
 slide_on_ceiling = false
 floor_block_on_wall = false
+initial_pos = Vector2(200, -50)
 
 [node name="Submarine" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_fb5di")]
 position = Vector2(10304, 624)

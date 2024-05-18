@@ -46,6 +46,18 @@ _data = {
 [node name="MapSelection" type="Node2D"]
 script = ExtResource("1_77iun")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
 [node name="Title" type="Label" parent="."]
 offset_right = 1152.0
 offset_bottom = 128.0
@@ -100,6 +112,13 @@ theme_override_fonts/font = ExtResource("1_ogesc")
 theme_override_font_sizes/font_size = 60
 text = "MAP 2"
 
+[node name="Highscore" type="Label" parent="Control/Map2"]
+offset_top = 128.0
+offset_right = 9.0
+offset_bottom = 154.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+
 [node name="Map3" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 832.0
@@ -113,17 +132,20 @@ theme_override_fonts/font = ExtResource("1_ogesc")
 theme_override_font_sizes/font_size = 60
 text = "MAP 3"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Highscore" type="Label" parent="Control/Map3"]
+offset_top = 128.0
+offset_right = 9.0
+offset_bottom = 154.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1032.0
+offset_top = 320.0
+offset_right = 1129.0
+offset_bottom = 360.0
+text = "Leaderboard"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -136,3 +158,4 @@ autoplay = "Fade In"
 [connection signal="pressed" from="Control/Map2" to="." method="play_fade_out"]
 [connection signal="pressed" from="Control/Map3" to="." method="_on_map_3_pressed"]
 [connection signal="pressed" from="Control/Map3" to="." method="play_fade_out"]
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

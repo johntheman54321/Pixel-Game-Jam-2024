@@ -6,10 +6,13 @@ class_name Player
 var player_entered = false
 var oxygen = 100
 @export var speed = 400
+@export var player_spawn = false
+@export var initial_pos : Vector2
 var moving = true
 var dir : Vector2
 func _ready():
-	pass
+	if player_spawn:
+		self.position = initial_pos
 
 
 func _physics_process(delta):
