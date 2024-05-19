@@ -3,7 +3,7 @@ extends Node2D
 var button_pressed = false
 
 func _process(delta):
-	Global.player_name = $LineEdit.text
+	pass
 
 
 func _on_play_pressed():

@@ -15,6 +15,7 @@ func _process(delta):
 	$"../CanvasLayer/Label".text = str(time_min) + ":" + str(time_sec) + ":" + str(time_mil)
 
 func start_3():
+	player.playerTimer.stop()
 	var pitch_init = 0.33
 	for n in range(0, 10):
 		$"../CanvasLayer/AnimatedSprite2D".show()
@@ -32,6 +33,7 @@ func start_3():
 			$".".start()
 			player.moving = true
 			$"../CanvasLayer/AnimatedSprite2D".hide()
+			player.playerTimer.start()
 			break
 
 

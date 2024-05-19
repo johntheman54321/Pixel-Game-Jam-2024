@@ -2,8 +2,6 @@ extends Node2D
 
 var map_switch : String
 @onready var animation_player = $AnimationPlayer
-@onready var leaderboard_scene = preload("res://addons/silent_wolf/Scores/Leaderboard.tscn")
-
 
 func _ready():
 	RenderingServer.set_default_clear_color(Color(0,1,1))
@@ -39,6 +37,3 @@ func _on_map_2_pressed():
 func _on_map_3_pressed():
 	map_switch = "3"
 
-
-func _on_button_pressed():
-	get_tree().change_scene_to_packed(leaderboard_scene)

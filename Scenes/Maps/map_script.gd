@@ -19,6 +19,7 @@ func _process(delta):
 		$CanvasLayer/SpeedTimer/ProgressBar.value = (speedtimer.time_left / speedtimer.wait_time) * 100
 	else:
 		speed_ui.hide()
+	$CanvasLayer/oxygenLevel.value = $Player.oxygen
 
 
 func _on_button_pressed():

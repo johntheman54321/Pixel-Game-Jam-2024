@@ -1,17 +1,15 @@
 res://Scenes/Maps/Map 1/map_1.tscn
+res://addons/silent_wolf/assets/themes/sw_theme.tres
 res://Scenes/map_selection/map_selection.tscn
 res://Scenes/underwater/submarine/submarine.tscn
-res://Scenes/underwater/Speed Boost/speed_boost.tscn
 res://Scenes/Player/player.tscn
-res://Scenes/underwater/oxygenpockets/oxygenpocket.tscn
+res://Scenes/main_menu/main_menu.tscn
+res://addons/silent_wolf/Scores/Leaderboard.tscn
+res://Scenes/underwater/submarine/submarine.gd
 res://Scenes/map_selection/map_selection.gd
 res://global.gd
-res://Scenes/underwater/submarine/submarine.gd
-res://Scenes/Maps/map_script.gd
-res://Scenes/Player/Player.gd
-res://addons/silent_wolf/assets/themes/sw_theme.tres
-res://addons/silent_wolf/Scores/Leaderboard.gd
-res://Scenes/main_menu/main_menu.tscn
 res://Scenes/main_menu/main_menu.gd
-res://addons/silent_wolf/Scores/Leaderboard.tscn
-res://addons/silent_wolf/Scores/ScoreItem.tscn
+res://Scenes/Player/Player.gd
+res://Scenes/Maps/map_script.gd
+res://Scenes/underwater/oxygenpockets/oxygenpocket.tscn
+res://Scenes/Maps/Timer.gd

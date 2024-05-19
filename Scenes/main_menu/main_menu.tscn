@@ -113,11 +113,5 @@ libraries = {
 }
 autoplay = "Fade In"
 
-[node name="LineEdit" type="LineEdit" parent="."]
-offset_left = 48.0
-offset_top = 264.0
-offset_right = 168.0
-offset_bottom = 328.0
-
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

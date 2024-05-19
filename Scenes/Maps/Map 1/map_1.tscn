@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b8xf8qmikl528"]
+[gd_scene load_steps=28 format=3 uid="uid://b8xf8qmikl528"]
 
 [ext_resource type="PackedScene" uid="uid://bls54l12a8eaj" path="res://Scenes/Player/player.tscn" id="1_euj3i"]
 [ext_resource type="Script" path="res://Scenes/Maps/map_script.gd" id="1_g7psw"]
@@ -103,6 +103,30 @@ animations = [{
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ctkbh"]
 bg_color = Color(0, 0, 0, 0.686275)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vl1r"]
+bg_color = Color(0.712129, 0.712129, 0.712129, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8y8ao"]
+bg_color = Color(0.00441869, 0.174162, 0.779507, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="Animation" id="Animation_uhul5"]
 resource_name = "EnterSubmarine"
 length = 1.4
@@ -192,6 +216,16 @@ layer_0/tile_data = PackedInt32Array(65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 26
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+modulate = Color(0, 0, 0, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
 [node name="Label" type="Label" parent="CanvasLayer"]
 offset_left = 968.0
 offset_right = 1152.0
@@ -211,21 +245,11 @@ sprite_frames = SubResource("SpriteFrames_1hpuf")
 animation = &"2"
 
 [node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 16.0
-offset_top = 584.0
-offset_right = 152.0
-offset_bottom = 632.0
+offset_left = 1006.0
+offset_top = 591.0
+offset_right = 1142.0
+offset_bottom = 639.0
 text = "Restart"
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-modulate = Color(0, 0, 0, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
 
 [node name="SpeedTimer" type="Sprite2D" parent="CanvasLayer"]
 texture_filter = 1
@@ -239,6 +263,16 @@ offset_top = -8.0
 offset_right = 8.0
 offset_bottom = 8.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_ctkbh")
+value = 100.0
+show_percentage = false
+
+[node name="oxygenLevel" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 293.0
+offset_top = 597.0
+offset_right = 759.0
+offset_bottom = 640.0
+theme_override_styles/background = SubResource("StyleBoxFlat_1vl1r")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8y8ao")
 value = 100.0
 show_percentage = false
 

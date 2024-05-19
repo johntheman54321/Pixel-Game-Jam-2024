@@ -9,6 +9,7 @@ var highscore_text : String
 func _on_area_2d_body_entered(body):
 	if body is Player:
 		$"../Timer".stop()
+		player.playerTimer.stop()
 		player.moving = false
 		
 		if world.current_map == 1:
@@ -23,8 +24,6 @@ func _on_area_2d_body_entered(body):
 			highscore = Global.map3_highscore
 			highscore_text = Global.map3_highscore_text
 			print("map is 3")
-		
-		SilentWolf.Scores.save_score(Global.player_name, $"../Timer".check_score()[0])
 		
 		if highscore == 0:
 			highscore = $"../Timer".check_score()[1]

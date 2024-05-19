@@ -6,10 +6,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_tu8jo"]
 radius = 4.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("playerTimer")]
 position = Vector2(0, 40)
 scale = Vector2(8, 8)
 script = ExtResource("1_n03ss")
+playerTimer = NodePath("Timer")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -30,17 +31,7 @@ disabled = true
 shape = SubResource("CircleShape2D_tu8jo")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.1
 autostart = true
-
-[node name="Label" type="Label" parent="."]
-offset_left = -3.0
-offset_top = -11.0
-offset_right = 757.0
-offset_bottom = 296.0
-scale = Vector2(0.02, 0.02)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 200
-text = "10"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

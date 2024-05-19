@@ -8,6 +8,7 @@ var oxygen = 100
 @export var speed = 400
 @export var player_spawn = false
 @export var initial_pos : Vector2
+@export var playerTimer : Timer
 var moving = true
 var dir : Vector2
 func _ready():
@@ -26,15 +27,15 @@ func _physics_process(delta):
 		player.look_at(global_position + Vector2(0, -1))
 		
 	move_and_slide()
-
+	if oxygen <= 0:
+		queue_free()
 
 
 
 func _on_timer_timeout():
 	if player_entered:
-		oxygen += 10
+		oxygen += 0.9
 	else:
-		oxygen -= 6
+		oxygen -= 0.5
 	if oxygen > 100:
 		oxygen = 100
-	$Label.text = str(oxygen)
