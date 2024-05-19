@@ -198,7 +198,7 @@ stream = ExtResource("2_6mxnk")
 pitch_scale = 0.38
 
 [node name="Player" parent="." instance=ExtResource("1_euj3i")]
-position = Vector2(10669, 166)
+position = Vector2(200, -50)
 scale = Vector2(4, 4)
 slide_on_ceiling = false
 floor_block_on_wall = false
@@ -351,6 +351,14 @@ scale = Vector2(0.3, 0.3)
 
 [node name="oxygenpocket" parent="objects/oxygenpockets" instance=ExtResource("10_5t2d8")]
 position = Vector2(217, 442)
+
+[node name="oxygenpocket2" parent="objects/oxygenpockets" instance=ExtResource("10_5t2d8")]
+position = Vector2(4123, 161)
+scale = Vector2(0.8, 0.8)
+
+[node name="oxygenpocket3" parent="objects/oxygenpockets" instance=ExtResource("10_5t2d8")]
+position = Vector2(8447, -47)
+scale = Vector2(0.8, 0.8)
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
