@@ -14,16 +14,12 @@ func _process(delta):
 	if Global.map2_highscore != 0:
 		$Control/Map2/Highscore.text = "Highscore
 		" + Global.map2_highscore_text
-	if Global.map3_highscore != 0:
-		$Control/Map3/Highscore.text = "Highscore
-		" + Global.map3_highscore_text
-
 func play_fade_out(map_switch):
 	animation_player.play("Fade Out")
 	await get_tree().create_timer(1).timeout
 	RenderingServer.set_default_clear_color(Color(0,0,0))
 	get_tree().change_scene_to_file("res://Scenes/Maps/Map " + str(map_switch) + "/map_" + str(map_switch) + ".tscn")
-
+	
 
 
 func _on_map_1_pressed():
@@ -31,9 +27,11 @@ func _on_map_1_pressed():
 
 
 func _on_map_2_pressed():
-	map_switch = "2"
+	play_fade_out(2)
 
 
-func _on_map_3_pressed():
-	map_switch = "3"
 
+
+
+func _on_back_pressed():
+	get_tree().change_scene_to_file("res://Scenes/main_menu/main_menu.tscn")

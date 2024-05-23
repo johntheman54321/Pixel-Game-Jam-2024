@@ -9,11 +9,13 @@ var oxygen = 100
 @export var player_spawn = false
 @export var initial_pos : Vector2
 @export var playerTimer : Timer
+@export var camera_zoom : Vector2
 var moving = true
 var dir : Vector2
 func _ready():
 	if player_spawn:
 		self.position = initial_pos
+	$Camera2D.zoom = camera_zoom
 
 
 func _physics_process(delta):
@@ -28,13 +30,13 @@ func _physics_process(delta):
 		
 	move_and_slide()
 	if oxygen <= 0:
-		queue_free()
+		get_tree().change_scene_to_file("res://Scenes/deathscreen.tscn")
 
 
 
 func _on_timer_timeout():
 	if player_entered:
-		oxygen += 0.9
+		oxygen += 2
 	else:
 		oxygen -= 0.5
 	if oxygen > 100:

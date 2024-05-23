@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b8xf8qmikl528"]
+[gd_scene load_steps=29 format=3 uid="uid://b8xf8qmikl528"]
 
 [ext_resource type="PackedScene" uid="uid://bls54l12a8eaj" path="res://Scenes/Player/player.tscn" id="1_euj3i"]
 [ext_resource type="Script" path="res://Scenes/Maps/map_script.gd" id="1_g7psw"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://djqgyq21w67as" path="res://Sprites/Tilemap/Underwater Block 32x32.png" id="4_bqh6k"]
 [ext_resource type="Script" path="res://Scenes/Maps/Timer.gd" id="5_ajvbk"]
 [ext_resource type="Texture2D" uid="uid://ceofif7c4vf5q" path="res://Sprites/UI/Countdwon Aquarun.png" id="5_d6exy"]
+[ext_resource type="FontFile" uid="uid://b2ujavy03cxpx" path="res://Fonts/Minecraftia-Regular.ttf" id="6_282hr"]
 [ext_resource type="Texture2D" uid="uid://4b2qo47kyl2c" path="res://Sprites/UI/Speed Trash.png" id="7_v64r8"]
 [ext_resource type="PackedScene" uid="uid://b8gw3jsqskbb2" path="res://Scenes/underwater/Speed Boost/speed_boost.tscn" id="8_svaa4"]
 [ext_resource type="PackedScene" uid="uid://cg8qb6dowpdb8" path="res://Scenes/underwater/oxygenpockets/oxygenpocket.tscn" id="10_5t2d8"]
@@ -203,6 +204,7 @@ scale = Vector2(4, 4)
 slide_on_ceiling = false
 floor_block_on_wall = false
 initial_pos = Vector2(200, -50)
+camera_zoom = Vector2(1, 1)
 
 [node name="Submarine" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_fb5di")]
 position = Vector2(10304, 624)
@@ -227,12 +229,13 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 968.0
-offset_right = 1152.0
-offset_bottom = 65.0
+offset_left = 941.0
+offset_right = 1149.0
+offset_bottom = 78.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_282hr")
 theme_override_font_sizes/font_size = 40
 text = "00:00:00"
 
@@ -249,7 +252,16 @@ offset_left = 1006.0
 offset_top = 591.0
 offset_right = 1142.0
 offset_bottom = 639.0
+theme_override_fonts/font = ExtResource("6_282hr")
 text = "Restart"
+
+[node name="Leave" type="Button" parent="CanvasLayer"]
+offset_left = 15.0
+offset_top = 589.0
+offset_right = 151.0
+offset_bottom = 637.0
+theme_override_fonts/font = ExtResource("6_282hr")
+text = "Leave"
 
 [node name="SpeedTimer" type="Sprite2D" parent="CanvasLayer"]
 texture_filter = 1
@@ -275,6 +287,15 @@ theme_override_styles/background = SubResource("StyleBoxFlat_1vl1r")
 theme_override_styles/fill = SubResource("StyleBoxFlat_8y8ao")
 value = 100.0
 show_percentage = false
+
+[node name="Label" type="Label" parent="CanvasLayer/oxygenLevel"]
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("6_282hr")
+text = "OxygenBar"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
@@ -357,9 +378,38 @@ position = Vector2(4123, 161)
 scale = Vector2(0.8, 0.8)
 
 [node name="oxygenpocket3" parent="objects/oxygenpockets" instance=ExtResource("10_5t2d8")]
-position = Vector2(8447, -47)
-scale = Vector2(0.8, 0.8)
+position = Vector2(7583, 79)
+scale = Vector2(0.6, 0.6)
+
+[node name="oxygenpocket4" parent="objects/oxygenpockets" instance=ExtResource("10_5t2d8")]
+position = Vector2(9208, 945)
+scale = Vector2(0.6, 0.6)
+
+[node name="oxygenpocket5" parent="objects/oxygenpockets" instance=ExtResource("10_5t2d8")]
+position = Vector2(10808, 1241)
+scale = Vector2(0.6, 0.6)
+
+[node name="oxygenpocket6" parent="objects/oxygenpockets" instance=ExtResource("10_5t2d8")]
+position = Vector2(11496, 161)
+scale = Vector2(0.6, 0.6)
+
+[node name="oxygenpocket7" parent="objects/oxygenpockets" instance=ExtResource("10_5t2d8")]
+position = Vector2(9792, -395)
+scale = Vector2(0.6, 0.6)
+
+[node name="oxygenpocket8" parent="objects/oxygenpockets" instance=ExtResource("10_5t2d8")]
+position = Vector2(9774, 983)
+scale = Vector2(0.6, 0.6)
+
+[node name="oxygenpocket9" parent="objects/oxygenpockets" instance=ExtResource("10_5t2d8")]
+position = Vector2(10699, -78)
+scale = Vector2(0.6, 0.6)
+
+[node name="oxygenpocket10" parent="objects/oxygenpockets" instance=ExtResource("10_5t2d8")]
+position = Vector2(10759, 141)
+scale = Vector2(0.6, 0.6)
 
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Leave" to="." method="_on_button_2_pressed"]
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
 [connection signal="timeout" from="objects/speedboosts/speedtimer" to="." method="_on_speedtimer_timeout"]

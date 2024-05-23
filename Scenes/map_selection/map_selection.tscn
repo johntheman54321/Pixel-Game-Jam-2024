@@ -77,13 +77,14 @@ anchors_preset = 0
 offset_top = 272.0
 offset_right = 1152.0
 offset_bottom = 552.0
+scale = Vector2(1.2, 1.2)
 
 [node name="Map1" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 48.0
-offset_right = 320.0
-offset_bottom = 176.0
+offset_left = 166.667
+offset_top = 40.0
+offset_right = 422.667
+offset_bottom = 168.0
 theme_override_colors/font_color = Color(0, 0.462745, 0.568627, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -97,14 +98,15 @@ offset_top = 128.0
 offset_right = 9.0
 offset_bottom = 154.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ogesc")
 theme_override_font_sizes/font_size = 40
 
 [node name="Map2" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 448.0
-offset_top = 48.0
-offset_right = 704.0
-offset_bottom = 176.0
+offset_left = 550.667
+offset_top = 40.0
+offset_right = 806.667
+offset_bottom = 168.0
 theme_override_colors/font_color = Color(0, 0.462745, 0.568627, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -118,28 +120,17 @@ offset_top = 128.0
 offset_right = 9.0
 offset_bottom = 154.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-
-[node name="Map3" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 832.0
-offset_top = 48.0
-offset_right = 1088.0
-offset_bottom = 176.0
-theme_override_colors/font_color = Color(0, 0.462745, 0.568627, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_ogesc")
-theme_override_font_sizes/font_size = 60
-text = "MAP 3"
-
-[node name="Highscore" type="Label" parent="Control/Map3"]
-layout_mode = 0
-offset_top = 128.0
-offset_right = 9.0
-offset_bottom = 154.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
+
+[node name="Back" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 853.333
+offset_top = 260.0
+offset_right = 953.333
+offset_bottom = 307.0
+theme_override_fonts/font = ExtResource("1_ogesc")
+text = "BACK"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -150,5 +141,4 @@ autoplay = "Fade In"
 [connection signal="pressed" from="Control/Map1" to="." method="_on_map_1_pressed"]
 [connection signal="pressed" from="Control/Map2" to="." method="play_fade_out"]
 [connection signal="pressed" from="Control/Map2" to="." method="_on_map_2_pressed"]
-[connection signal="pressed" from="Control/Map3" to="." method="play_fade_out"]
-[connection signal="pressed" from="Control/Map3" to="." method="_on_map_3_pressed"]
+[connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]

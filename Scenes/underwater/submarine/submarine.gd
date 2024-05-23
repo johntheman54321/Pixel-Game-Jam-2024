@@ -20,10 +20,6 @@ func _on_area_2d_body_entered(body):
 			highscore = Global.map2_highscore
 			highscore_text= Global.map2_highscore_text
 			print("map is 2")
-		elif world.current_map == 3:
-			highscore = Global.map3_highscore
-			highscore_text = Global.map3_highscore_text
-			print("map is 3")
 		
 		if highscore == 0:
 			highscore = $"../Timer".check_score()[1]
@@ -43,12 +39,8 @@ func _on_area_2d_body_entered(body):
 			Global.map2_highscore = highscore
 			Global.map2_highscore_text = highscore_text
 			print("map is 2")
-		elif world.current_map == 3:
-			Global.map3_highscore = highscore
-			Global.map3_highscore_text = highscore_text
-			print("map is 3")
+
 		
-		print(Global.map1_highscore)	
 		world.animation_player.play("EnterSubmarine")
 		player.dir = Vector2(0, 1)
 		await get_tree().create_timer(1.5).timeout
