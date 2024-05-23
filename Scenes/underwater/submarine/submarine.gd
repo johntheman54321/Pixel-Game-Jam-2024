@@ -4,6 +4,7 @@ extends StaticBody2D
 @export var player : CharacterBody2D
 var highscore : float
 var highscore_text : String
+@onready var new_highscore = false
 
 
 func _on_area_2d_body_entered(body):
@@ -26,10 +27,12 @@ func _on_area_2d_body_entered(body):
 			highscore_text = $"../Timer".check_score()[0]
 			print($"../Timer".check_score()[0] + "is the text")
 			print("first highscore")
+			new_highscore = true
 		elif $"../Timer".check_score()[1] < highscore:
 			highscore_text = $"../Timer".check_score()[0]
 			highscore = $"../Timer".check_score()[1]
 			print("new highscore")
+			new_highscore = true
 		
 		if world.current_map == 1:
 			Global.map1_highscore = highscore
@@ -47,4 +50,6 @@ func _on_area_2d_body_entered(body):
 		world.animation_player.play("Fade out")
 		await get_tree().create_timer(1).timeout
 		RenderingServer.set_default_clear_color(Color(0,0,0))
+		if new_highscore == true:
+			await Leaderboards.post_guest_score("aquarun-map1-fastest-ti-Tov4", Global.map1_highscore, Global.player_name)
 		get_tree().change_scene_to_file("res://Scenes/map_selection/map_selection.tscn")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cl1oadr58xsk6"]
 
-[ext_resource type="Script" path="res://Deathscreen.gd" id="1_n55tn"]
-[ext_resource type="FontFile" uid="uid://b2ujavy03cxpx" path="res://Fonts/Minecraftia-Regular.ttf" id="2_fs5k5"]
+[ext_resource type="Script" path="res://Scenes/DeathScene/Deathscreen.gd" id="1_65s52"]
+[ext_resource type="FontFile" uid="uid://b2ujavy03cxpx" path="res://Fonts/Minecraftia-Regular.ttf" id="2_rhjbl"]
 
 [node name="Deathscreen" type="Node2D"]
-script = ExtResource("1_n55tn")
+script = ExtResource("1_65s52")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 216.0
@@ -12,7 +12,7 @@ offset_top = 48.0
 offset_right = 713.0
 offset_bottom = 204.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_fs5k5")
+theme_override_fonts/font = ExtResource("2_rhjbl")
 theme_override_font_sizes/font_size = 100
 text = "Your Dead"
 
@@ -21,7 +21,7 @@ offset_left = 400.0
 offset_top = 280.0
 offset_right = 688.0
 offset_bottom = 464.0
-theme_override_fonts/font = ExtResource("2_fs5k5")
+theme_override_fonts/font = ExtResource("2_rhjbl")
 theme_override_font_sizes/font_size = 50
 text = "Go Home"
 

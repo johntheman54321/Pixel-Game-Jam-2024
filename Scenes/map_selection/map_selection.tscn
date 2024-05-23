@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ce2jro1mwr04s"]
+[gd_scene load_steps=8 format=3 uid="uid://ce2jro1mwr04s"]
 
 [ext_resource type="Script" path="res://Scenes/map_selection/map_selection.gd" id="1_77iun"]
 [ext_resource type="FontFile" uid="uid://b2ujavy03cxpx" path="res://Fonts/Minecraftia-Regular.ttf" id="1_ogesc"]
+[ext_resource type="PackedScene" uid="uid://dgygkbtm0burn" path="res://addons/quiver_leaderboards/leaderboard_ui.tscn" id="3_ul78g"]
 
 [sub_resource type="Animation" id="Animation_q1ys4"]
 resource_name = "Fade In"
@@ -132,13 +133,41 @@ offset_bottom = 307.0
 theme_override_fonts/font = ExtResource("1_ogesc")
 text = "BACK"
 
+[node name="Leaderboard" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 6.66667
+offset_top = 273.333
+offset_right = 103.667
+offset_bottom = 303.333
+theme_override_fonts/font = ExtResource("1_ogesc")
+text = "Leaderboard"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_wtgx0")
 }
 autoplay = "Fade In"
 
+[node name="Leaderboard" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="LeaderboardUI" parent="Leaderboard" instance=ExtResource("3_ul78g")]
+layout_mode = 1
+leaderboard_id = "aquarun-map1-fastest-ti-Tov4"
+
+[node name="Button" type="Button" parent="Leaderboard/LeaderboardUI"]
+layout_mode = 0
+offset_right = 56.0
+offset_bottom = 48.0
+text = "CLOSE"
+
 [connection signal="pressed" from="Control/Map1" to="." method="_on_map_1_pressed"]
 [connection signal="pressed" from="Control/Map2" to="." method="play_fade_out"]
 [connection signal="pressed" from="Control/Map2" to="." method="_on_map_2_pressed"]
 [connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Control/Leaderboard" to="." method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="Leaderboard/LeaderboardUI/Button" to="." method="_on_close_pressed"]

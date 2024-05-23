@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://s8bm2krcjn1b"]
+[gd_scene load_steps=8 format=3 uid="uid://s8bm2krcjn1b"]
 
 [ext_resource type="Script" path="res://Scenes/main_menu/main_menu.gd" id="1_okp7i"]
 [ext_resource type="FontFile" uid="uid://b2ujavy03cxpx" path="res://Fonts/Minecraftia-Regular.ttf" id="2_77myy"]
@@ -48,10 +48,27 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_3o7uk"]
+resource_name = "NoName"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/NOName:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0xd17"]
 _data = {
 "Fade In": SubResource("Animation_gcog1"),
 "Fade Out": SubResource("Animation_vnu53"),
+"NoName": SubResource("Animation_3o7uk"),
 "RESET": SubResource("Animation_3ef44")
 }
 
@@ -95,6 +112,37 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 32.0
+offset_top = 200.0
+offset_right = 170.0
+offset_bottom = 278.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_77myy")
+theme_override_font_sizes/font_size = 40
+text = "Name:"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Label"]
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 104.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("2_77myy")
+
+[node name="NOName" type="Label" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 72.0
+offset_top = 40.0
+offset_right = 1224.0
+offset_bottom = 276.0
+rotation = 0.326377
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_77myy")
+theme_override_font_sizes/font_size = 130
+text = "ADD YOUR NAME"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 modulate = Color(1, 1, 1, 0)
