@@ -29,17 +29,14 @@ func _on_map_1_pressed():
 func _on_map_2_pressed():
 	play_fade_out(2)
 
-
-
-
-
 func _on_back_pressed():
+	$AnimationPlayer.play("Back")
+	await get_tree().create_timer($AnimationPlayer.current_animation_length).timeout
 	get_tree().change_scene_to_file("res://Scenes/main_menu/main_menu.tscn")
 
 
 func _on_leaderboard_pressed():
 	$Leaderboard.show()
-
 
 func _on_close_pressed():
 	$Leaderboard.hide()

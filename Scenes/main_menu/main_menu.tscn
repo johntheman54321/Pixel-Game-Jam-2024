@@ -1,14 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://s8bm2krcjn1b"]
+[gd_scene load_steps=12 format=3 uid="uid://s8bm2krcjn1b"]
 
 [ext_resource type="Script" path="res://Scenes/main_menu/main_menu.gd" id="1_okp7i"]
 [ext_resource type="FontFile" uid="uid://b2ujavy03cxpx" path="res://Fonts/Minecraftia-Regular.ttf" id="2_77myy"]
+[ext_resource type="Texture2D" uid="uid://bg4npvvpr0byx" path="res://Sprites/Main-menu/Parralax-1.png" id="3_3cph0"]
+[ext_resource type="Script" path="res://Scenes/main_menu/ParallaxBackground.gd" id="3_xej5k"]
+[ext_resource type="Texture2D" uid="uid://dyogis703o1ro" path="res://Sprites/Main-menu/Parralax-2.png" id="4_5rb5u"]
+[ext_resource type="Texture2D" uid="uid://dx3p1nuc2b8f3" path="res://Sprites/Main-menu/Parralax-3.png" id="5_tijwm"]
 
 [sub_resource type="Animation" id="Animation_gcog1"]
 resource_name = "Fade In"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/path = NodePath("CanvasLayer/AnimationContainer/ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -23,14 +27,26 @@ resource_name = "Fade Out"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/path = NodePath("ParallaxBackground:offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Vector2(0, 0), Vector2(0, 100), Vector2(0, -650)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/AnimationContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 100), Vector2(0, -650)]
 }
 
 [sub_resource type="Animation" id="Animation_3o7uk"]
@@ -39,7 +55,7 @@ length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/NOName:modulate")
+tracks/0/path = NodePath("CanvasLayer/AnimationContainer/NOName:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -54,7 +70,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/path = NodePath("CanvasLayer/AnimationContainer/ColorRect:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -62,6 +78,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ParallaxBackground:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/AnimationContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0xd17"]
@@ -75,33 +115,117 @@ _data = {
 [node name="main_menu" type="Node2D"]
 script = ExtResource("1_okp7i")
 
-[node name="Play" type="Button" parent="."]
-offset_left = 256.0
-offset_top = 184.0
-offset_right = 896.0
-offset_bottom = 367.0
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scale = Vector2(20.25, 20.25)
+transform = Transform2D(20.25, 0, 0, 20.25, 0, 0)
+script = ExtResource("3_xej5k")
+
+[node name="ColorRect2" type="ColorRect" parent="ParallaxBackground"]
+offset_top = -9.0
+offset_right = 57.0
+offset_bottom = 13.0
+color = Color(0.391925, 0.756112, 1, 1)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(27.9637, 16.1975)
+motion_scale = Vector2(-0.4, -0.1)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture = ExtResource("5_tijwm")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(27.9637, 16.1975)
+motion_scale = Vector2(4, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("4_5rb5u")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(27.9637, 16.1975)
+motion_scale = Vector2(2, 1.5)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("3_3cph0")
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground"]
+offset_left = -4.0
+offset_top = 32.0
+offset_right = 60.0
+offset_bottom = 65.0
+color = Color(0.2015, 0.39585, 0.65, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AnimationContainer" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 39.9999
+
+[node name="Name" type="Label" parent="CanvasLayer/AnimationContainer"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 154.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_77myy")
+theme_override_font_sizes/font_size = 40
+text = "Name:"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/AnimationContainer/Name"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 104.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("2_77myy")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/AnimationContainer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Play" type="Button" parent="CanvasLayer/AnimationContainer"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 240.0
+offset_right = 376.0
+offset_bottom = 347.0
 theme_override_colors/font_color = Color(0, 0.463408, 0.569605, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_77myy")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 55
 text = "Play"
 
-[node name="Quit" type="Button" parent="."]
-offset_left = 256.0
-offset_top = 432.0
-offset_right = 896.0
-offset_bottom = 577.0
+[node name="Quit" type="Button" parent="CanvasLayer/AnimationContainer"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 408.0
+offset_right = 376.0
+offset_bottom = 515.0
 theme_override_colors/font_color = Color(0, 0.463408, 0.569605, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_77myy")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 55
 text = "Quit"
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="CanvasLayer/AnimationContainer"]
+layout_mode = 0
 offset_right = 1152.0
-offset_bottom = 128.0
+offset_bottom = 183.0
 theme_override_colors/font_color = Color(0, 0.748136, 0.913787, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -111,28 +235,9 @@ text = "AQUARUN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 32.0
-offset_top = 200.0
-offset_right = 170.0
-offset_bottom = 278.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_77myy")
-theme_override_font_sizes/font_size = 40
-text = "Name:"
-
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Label"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 56.0
-offset_right = 104.0
-offset_bottom = 96.0
-theme_override_fonts/font = ExtResource("2_77myy")
-
-[node name="NOName" type="Label" parent="CanvasLayer"]
+[node name="NOName" type="Label" parent="CanvasLayer/AnimationContainer"]
 modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 72.0
 offset_top = 40.0
 offset_right = 1224.0
@@ -145,22 +250,11 @@ theme_override_fonts/font = ExtResource("2_77myy")
 theme_override_font_sizes/font_size = 130
 text = "ADD YOUR NAME"
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-modulate = Color(1, 1, 1, 0)
-self_modulate = Color(0, 0, 0, 1)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_0xd17")
 }
 autoplay = "Fade In"
 
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/AnimationContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/AnimationContainer/Quit" to="." method="_on_quit_pressed"]
