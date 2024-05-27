@@ -3,7 +3,9 @@ extends Node2D
 var button_pressed = false
 
 func _ready():
+	$CanvasLayer/Label/LineEdit.text = Global.player_name
 	$AnimationPlayer.play("Fade In")
+	
 
 func _process(delta):
 	pass
@@ -23,5 +25,7 @@ func _on_play_pressed():
 
 
 func _on_quit_pressed():
+	$AnimationPlayer.play("Fade Out")
+	await get_tree().create_timer(2).timeout
 	button_pressed = true
 	get_tree().quit()

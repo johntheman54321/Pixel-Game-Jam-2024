@@ -117,7 +117,7 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8y8ao"]
-bg_color = Color(0.00441869, 0.174162, 0.779507, 1)
+bg_color = Color(0.34902, 0.576471, 0.898039, 1)
 border_width_left = 6
 border_width_top = 6
 border_width_right = 6
@@ -282,6 +282,7 @@ show_percentage = false
 layout_mode = 0
 offset_right = 465.0
 offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_282hr")
 text = "OxygenBar"
 horizontal_alignment = 1
@@ -409,7 +410,7 @@ scale = Vector2(0.6, 0.6)
 position = Vector2(10759, 141)
 scale = Vector2(0.6, 0.6)
 
-[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="restart_game"]
 [connection signal="pressed" from="CanvasLayer/Leave" to="." method="_on_button_2_pressed"]
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
 [connection signal="timeout" from="objects/speedboosts/speedtimer" to="." method="_on_speedtimer_timeout"]

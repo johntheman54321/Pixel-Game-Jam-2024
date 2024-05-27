@@ -30,7 +30,7 @@ func _physics_process(delta):
 		
 	move_and_slide()
 	if oxygen <= 0:
-		get_tree().change_scene_to_file("res://Scenes/deathscreen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/DeathScene/deathscreen.tscn")
 
 
 

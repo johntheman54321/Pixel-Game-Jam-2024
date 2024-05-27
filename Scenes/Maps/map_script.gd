@@ -20,9 +20,11 @@ func _process(delta):
 	else:
 		speed_ui.hide()
 	$CanvasLayer/oxygenLevel.value = $Player.oxygen
+	if Input.is_key_pressed(KEY_R):
+		restart_game()
 
 
-func _on_button_pressed():
+func restart_game():
 	get_tree().reload_current_scene()
 
 
