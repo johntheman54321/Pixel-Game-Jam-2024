@@ -7,12 +7,6 @@ extends Node2D
 @export var animation_player : AnimationPlayer
 @export var current_map : int
 
-
-
-
-func _ready():
-	RenderingServer.set_default_clear_color(Color(0,1,1))
-	
 func _process(delta):
 	if speedtimer.time_left != 0:
 		speed_ui.show()

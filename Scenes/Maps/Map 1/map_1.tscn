@@ -146,33 +146,9 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_m2bgy"]
 resource_name = "Fade In"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_41jyt"]
 resource_name = "Fade out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_np7uj"]
 length = 0.001
@@ -219,9 +195,9 @@ layer_0/tile_data = PackedInt32Array(65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 26
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 941.0
-offset_right = 1149.0
-offset_bottom = 78.0
+offset_left = 936.0
+offset_right = 1152.0
+offset_bottom = 86.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
@@ -232,23 +208,23 @@ text = "00:00:00"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
 modulate = Color(0.731958, 0.746691, 0.729548, 1)
 texture_filter = 1
-position = Vector2(608, 96)
+position = Vector2(576, 96)
 scale = Vector2(13.537, 12)
 sprite_frames = SubResource("SpriteFrames_1hpuf")
 animation = &"2"
 
 [node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 1006.0
-offset_top = 591.0
-offset_right = 1142.0
-offset_bottom = 639.0
+offset_left = 960.0
+offset_top = 568.0
+offset_right = 1149.0
+offset_bottom = 637.0
 theme_override_fonts/font = ExtResource("6_282hr")
 text = "Restart"
 
 [node name="Leave" type="Button" parent="CanvasLayer"]
-offset_left = 15.0
-offset_top = 589.0
-offset_right = 151.0
+offset_left = 8.0
+offset_top = 568.0
+offset_right = 192.0
 offset_bottom = 637.0
 theme_override_fonts/font = ExtResource("6_282hr")
 text = "Leave"
@@ -269,16 +245,17 @@ value = 100.0
 show_percentage = false
 
 [node name="oxygenLevel" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 293.0
-offset_top = 597.0
-offset_right = 759.0
-offset_bottom = 640.0
+offset_left = 256.0
+offset_top = 568.0
+offset_right = 896.0
+offset_bottom = 635.0
 theme_override_styles/background = SubResource("StyleBoxFlat_1vl1r")
 theme_override_styles/fill = SubResource("StyleBoxFlat_8y8ao")
 value = 100.0
 show_percentage = false
 
 [node name="Label" type="Label" parent="CanvasLayer/oxygenLevel"]
+visible = false
 layout_mode = 0
 offset_right = 465.0
 offset_bottom = 40.0
@@ -287,16 +264,6 @@ theme_override_fonts/font = ExtResource("6_282hr")
 text = "OxygenBar"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-modulate = Color(0, 0, 0, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false

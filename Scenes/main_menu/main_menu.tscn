@@ -129,23 +129,24 @@ color = Color(0.391925, 0.756112, 1, 1)
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(27.9637, 16.1975)
 motion_scale = Vector2(-0.4, -0.1)
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(0.480748, 0)
+scale = Vector2(1.03704, 1)
 texture = ExtResource("5_tijwm")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(27.9637, 16.1975)
 motion_scale = Vector2(4, 0.5)
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(0.480745, 0)
+scale = Vector2(1.03704, 1)
 texture = ExtResource("4_5rb5u")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(27.9637, 16.1975)
 motion_scale = Vector2(2, 1.5)
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource("3_3cph0")
@@ -254,6 +255,7 @@ text = "ADD YOUR NAME"
 libraries = {
 "": SubResource("AnimationLibrary_0xd17")
 }
+speed_scale = 1.5
 
 [connection signal="pressed" from="CanvasLayer/AnimationContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/AnimationContainer/Quit" to="." method="_on_quit_pressed"]

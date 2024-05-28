@@ -204,6 +204,7 @@ text = "Leaderboard"
 libraries = {
 "": SubResource("AnimationLibrary_wtgx0")
 }
+speed_scale = 1.5
 
 [node name="Leaderboard" type="Control" parent="."]
 visible = false

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716902833
+::res://::1716909181
 global.gd::GDScript::-1::1716891919::0::1::::<>Node<>::
 ::res://addons/::1716891919
 ::res://addons/quiver_leaderboards/::1716891919
@@ -22,23 +22,23 @@ default_bus_layout.tres::AudioBusLayout::2143344979913753238::1716891919::0::1::
 ::res://Scenes/DeathScene/::1716891919
 Deathscreen.gd::GDScript::-1::1716891919::0::1::::<>Node2D<>::
 deathscreen.tscn::PackedScene::5599442692148655491::1716891919::0::1::::<><>::res://Scenes/DeathScene/Deathscreen.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf
-::res://Scenes/main_menu/::1716892912
-main_menu.gd::GDScript::-1::1716891919::0::1::::<>Node2D<>::
-main_menu.tscn::PackedScene::1331607232242123313::1716892912::0::1::::<><>::res://Scenes/main_menu/main_menu.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf<>res://Scenes/main_menu/ParallaxBackground.gd<>uid://bg4npvvpr0byx::::res://Sprites/Main-menu/Parralax-1.png<>uid://dyogis703o1ro::::res://Sprites/Main-menu/Parralax-2.png<>uid://dx3p1nuc2b8f3::::res://Sprites/Main-menu/Parralax-3.png
-ParallaxBackground.gd::GDScript::-1::1716892910::0::1::::<>ParallaxBackground<>::
-::res://Scenes/Maps/::1716891919
-map_script.gd::GDScript::-1::1716891919::0::1::::<>Node2D<>::
+::res://Scenes/main_menu/::1716907265
+main_menu.gd::GDScript::-1::1716902948::0::1::::<>Node2D<>::
+main_menu.tscn::PackedScene::1331607232242123313::1716907265::0::1::::<><>::res://Scenes/main_menu/main_menu.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf<>res://Scenes/main_menu/ParallaxBackground.gd<>uid://bg4npvvpr0byx::::res://Sprites/Main-menu/Parralax-1.png<>uid://dyogis703o1ro::::res://Sprites/Main-menu/Parralax-2.png<>uid://dx3p1nuc2b8f3::::res://Sprites/Main-menu/Parralax-3.png
+ParallaxBackground.gd::GDScript::-1::1716902967::0::1::::<>ParallaxBackground<>::
+::res://Scenes/Maps/::1716907263
+map_script.gd::GDScript::-1::1716907263::0::1::::<>Node2D<>::
 Timer.gd::GDScript::-1::1716891919::0::1::::<>Timer<>::
-::res://Scenes/Maps/Map 1/::1716892912
-map_1.tscn::PackedScene::4750496587542808487::1716892912::0::1::::<><>::uid://bls54l12a8eaj::::res://Scenes/Player/player.tscn<>res://Scenes/Maps/map_script.gd<>uid://dmi162xl4ln4h::::res://SFX/start-13691.mp3<>uid://bm2200vbxn7gg::::res://Scenes/underwater/submarine/submarine.tscn<>uid://djqgyq21w67as::::res://Sprites/Tilemap/Underwater Block 32x32.png<>res://Scenes/Maps/Timer.gd<>uid://ceofif7c4vf5q::::res://Sprites/UI/Countdwon Aquarun.png<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf<>uid://4b2qo47kyl2c::::res://Sprites/UI/Speed Trash.png<>uid://b8gw3jsqskbb2::::res://Scenes/underwater/Speed Boost/speed_boost.tscn<>uid://cg8qb6dowpdb8::::res://Scenes/underwater/oxygenpockets/oxygenpocket.tscn
+::res://Scenes/Maps/Map 1/::1716907265
+map_1.tscn::PackedScene::4750496587542808487::1716907265::0::1::::<><>::uid://bls54l12a8eaj::::res://Scenes/Player/player.tscn<>res://Scenes/Maps/map_script.gd<>uid://dmi162xl4ln4h::::res://SFX/start-13691.mp3<>uid://bm2200vbxn7gg::::res://Scenes/underwater/submarine/submarine.tscn<>uid://djqgyq21w67as::::res://Sprites/Tilemap/Underwater Block 32x32.png<>res://Scenes/Maps/Timer.gd<>uid://ceofif7c4vf5q::::res://Sprites/UI/Countdwon Aquarun.png<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf<>uid://4b2qo47kyl2c::::res://Sprites/UI/Speed Trash.png<>uid://b8gw3jsqskbb2::::res://Scenes/underwater/Speed Boost/speed_boost.tscn<>uid://cg8qb6dowpdb8::::res://Scenes/underwater/oxygenpockets/oxygenpocket.tscn
 ::res://Scenes/Maps/Map 2/::1716891919
 map_2.tscn::PackedScene::313615096033168609::1716891919::0::1::::<><>::res://Scenes/Maps/map_script.gd<>uid://dmi162xl4ln4h::::res://SFX/start-13691.mp3<>uid://bls54l12a8eaj::::res://Scenes/Player/player.tscn<>uid://bm2200vbxn7gg::::res://Scenes/underwater/submarine/submarine.tscn<>uid://djqgyq21w67as::::res://Sprites/Tilemap/Underwater Block 32x32.png<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf<>uid://ceofif7c4vf5q::::res://Sprites/UI/Countdwon Aquarun.png<>uid://4b2qo47kyl2c::::res://Sprites/UI/Speed Trash.png<>res://Scenes/Maps/Timer.gd<>uid://b8gw3jsqskbb2::::res://Scenes/underwater/Speed Boost/speed_boost.tscn<>uid://cg8qb6dowpdb8::::res://Scenes/underwater/oxygenpockets/oxygenpocket.tscn
-::res://Scenes/map_selection/::1716892912
-map_selection.gd::GDScript::-1::1716891919::0::1::::<>Node2D<>::
-map_selection.tscn::PackedScene::5109912528796366392::1716892912::0::1::::<><>::res://Scenes/map_selection/map_selection.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf<>uid://dgygkbtm0burn::::res://addons/quiver_leaderboards/leaderboard_ui.tscn
-::res://Scenes/Player/::1716892912
+::res://Scenes/map_selection/::1716907265
+map_selection.gd::GDScript::-1::1716903093::0::1::::<>Node2D<>::
+map_selection.tscn::PackedScene::5109912528796366392::1716907265::0::1::::<><>::res://Scenes/map_selection/map_selection.gd<>uid://b2ujavy03cxpx::::res://Fonts/Minecraftia-Regular.ttf<>uid://dgygkbtm0burn::::res://addons/quiver_leaderboards/leaderboard_ui.tscn
+::res://Scenes/Player/::1716907265
 Player.gd::GDScript::-1::1716891919::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::3197530680240593665::1716892912::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://bq12rr8w7jkea::::res://Sprites/Player/Man Arrow Trash.png
+player.tscn::PackedScene::3197530680240593665::1716907265::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://bq12rr8w7jkea::::res://Sprites/Player/Man Arrow Trash.png
 ::res://Scenes/underwater/::1716891919
 ::res://Scenes/underwater/oxygenpockets/::1716891919
 oxygenpocket.gd::GDScript::-1::1716891919::0::1::::<>Node2D<>::
@@ -46,9 +46,9 @@ oxygenpocket.tscn::PackedScene::5263073786300893479::1716891919::0::1::::<><>::r
 ::res://Scenes/underwater/Speed Boost/::1716891919
 Speed boost.gd::GDScript::-1::1716891919::0::1::::<>Node2D<>::
 speed_boost.tscn::PackedScene::4716425067610773553::1716891919::0::1::::<><>::res://Scenes/underwater/Speed Boost/Speed boost.gd<>uid://xsl1oc31jr1x::::res://Sprites/Objects/speed pick up trash.png
-::res://Scenes/underwater/submarine/::1716892912
+::res://Scenes/underwater/submarine/::1716907407
 submarine.gd::GDScript::-1::1716891919::0::1::::<>StaticBody2D<>::
-submarine.tscn::PackedScene::3286110355962786186::1716892912::0::1::::<><>::res://Scenes/underwater/submarine/submarine.gd<>uid://cpt7y31ggxv3a::::res://Sprites/Underwater/Submarine/Submarine Idle.png<>uid://c86itgeidxwsr::::res://Sprites/Underwater/Submarine/Submarine opening.png
+submarine.tscn::PackedScene::3286110355962786186::1716907407::0::1::::<><>::res://Scenes/underwater/submarine/submarine.gd<>uid://cpt7y31ggxv3a::::res://Sprites/Underwater/Submarine/Submarine Idle.png<>uid://c86itgeidxwsr::::res://Sprites/Underwater/Submarine/Submarine opening.png
 ::res://SFX/::1716891919
 default_bus_layout.tres::AudioBusLayout::4425814939177802073::1716891919::0::1::::<><>::
 start-13691.mp3::AudioStreamMP3::8019678652391097053::1716891919::1716891919::1::::<><>::
