@@ -12,11 +12,11 @@ var oxygen = 100
 @export var camera_zoom : Vector2
 var moving = true
 var dir : Vector2
+
 func _ready():
 	if player_spawn:
 		self.position = initial_pos
 	$Camera2D.zoom = camera_zoom
-
 
 func _physics_process(delta):
 	if moving:
@@ -31,8 +31,6 @@ func _physics_process(delta):
 	move_and_slide()
 	if oxygen <= 0:
 		get_tree().change_scene_to_file("res://Scenes/DeathScene/deathscreen.tscn")
-
-
 
 func _on_timer_timeout():
 	if player_entered:
