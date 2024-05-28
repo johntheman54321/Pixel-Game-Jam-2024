@@ -18,7 +18,6 @@ func _on_play_pressed():
 			$AnimationPlayer.play("Fade Out")
 		button_pressed = true
 		await get_tree().create_timer($AnimationPlayer.current_animation_length).timeout
-		RenderingServer.set_default_clear_color(Color(0,0,0))
 		get_tree().change_scene_to_file("res://Scenes/map_selection/map_selection.tscn")
 	else:
 		$AnimationPlayer.play("NoName")
