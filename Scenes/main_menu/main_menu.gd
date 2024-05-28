@@ -4,7 +4,6 @@ var button_pressed = false
 
 func _ready():
 	$CanvasLayer/AnimationContainer/Name/LineEdit.text = Global.player_name
-	$AnimationPlayer.play("Fade In")
 	
 
 func _process(delta):

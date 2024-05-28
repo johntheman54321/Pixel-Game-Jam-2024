@@ -5,7 +5,7 @@ var map_switch : String
 
 func _ready():
 	RenderingServer.set_default_clear_color(Color(0,1,1))
-	animation_player.play("Fade In")
+	pass
 
 func _process(delta):
 	if Global.map1_highscore != 0:

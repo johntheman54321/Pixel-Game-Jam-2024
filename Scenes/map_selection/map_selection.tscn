@@ -107,7 +107,7 @@ color = Color(0.2015, 0.39585, 0.65, 1)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-modulate = Color(0, 0, 0, 0)
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -204,7 +204,6 @@ text = "Leaderboard"
 libraries = {
 "": SubResource("AnimationLibrary_wtgx0")
 }
-autoplay = "Fade In"
 
 [node name="Leaderboard" type="Control" parent="."]
 visible = false
@@ -224,8 +223,8 @@ offset_bottom = 48.0
 text = "CLOSE"
 
 [connection signal="pressed" from="Control/Map1" to="." method="_on_map_1_pressed"]
-[connection signal="pressed" from="Control/Map2" to="." method="_on_map_2_pressed"]
 [connection signal="pressed" from="Control/Map2" to="." method="play_fade_out"]
+[connection signal="pressed" from="Control/Map2" to="." method="_on_map_2_pressed"]
 [connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Control/Leaderboard" to="." method="_on_leaderboard_pressed"]
 [connection signal="pressed" from="Leaderboard/LeaderboardUI/Button" to="." method="_on_close_pressed"]
