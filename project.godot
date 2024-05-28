@@ -28,7 +28,6 @@ PlayerAccounts="*res://addons/quiver_player_accounts/player_accounts.tscn"
 [display]
 
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 
 [editor_plugins]
 
