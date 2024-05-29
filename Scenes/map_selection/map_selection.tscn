@@ -36,14 +36,14 @@ resource_name = "Fade In"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Vector2(0, 680), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_c6gxk"]
@@ -87,6 +87,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(0, 272)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 680)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wtgx0"]
 _data = {
@@ -97,17 +109,13 @@ _data = {
 }
 
 [node name="MapSelection" type="Node2D"]
+position = Vector2(0, 680)
 script = ExtResource("1_77iun")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.2015, 0.39585, 0.65, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-modulate = Color(1, 1, 1, 0)
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -129,6 +137,7 @@ text = "Speedrun  Maps"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -137,6 +146,7 @@ offset_top = 272.0
 offset_right = 1152.0
 offset_bottom = 552.0
 scale = Vector2(1.2, 1.2)
+metadata/_edit_use_anchors_ = true
 
 [node name="Map1" type="Button" parent="Control"]
 layout_mode = 0
@@ -150,6 +160,7 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_ogesc")
 theme_override_font_sizes/font_size = 60
 text = "MAP 1"
+metadata/_edit_use_anchors_ = true
 
 [node name="Highscore" type="Label" parent="Control/Map1"]
 layout_mode = 0
@@ -159,6 +170,7 @@ offset_bottom = 154.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_ogesc")
 theme_override_font_sizes/font_size = 40
+metadata/_edit_use_anchors_ = true
 
 [node name="Map2" type="Button" parent="Control"]
 layout_mode = 0
@@ -172,6 +184,7 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_ogesc")
 theme_override_font_sizes/font_size = 60
 text = "MAP 2"
+metadata/_edit_use_anchors_ = true
 
 [node name="Highscore" type="Label" parent="Control/Map2"]
 layout_mode = 0
@@ -181,6 +194,7 @@ offset_bottom = 154.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_ogesc")
 theme_override_font_sizes/font_size = 40
+metadata/_edit_use_anchors_ = true
 
 [node name="Back" type="Button" parent="Control"]
 layout_mode = 0
@@ -190,6 +204,7 @@ offset_right = 953.333
 offset_bottom = 307.0
 theme_override_fonts/font = ExtResource("1_ogesc")
 text = "BACK"
+metadata/_edit_use_anchors_ = true
 
 [node name="Leaderboard" type="Button" parent="Control"]
 layout_mode = 0
@@ -199,11 +214,13 @@ offset_right = 103.667
 offset_bottom = 303.333
 theme_override_fonts/font = ExtResource("1_ogesc")
 text = "Leaderboard"
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_wtgx0")
 }
+autoplay = "Fade In"
 speed_scale = 1.5
 
 [node name="Leaderboard" type="Control" parent="."]

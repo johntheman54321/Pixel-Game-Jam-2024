@@ -12,14 +12,26 @@ resource_name = "Fade In"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/AnimationContainer/ColorRect:modulate")
+tracks/0/path = NodePath("ParallaxBackground:offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
+"values": [Vector2(0, 700), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/AnimationContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 700), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_vnu53"]
@@ -70,34 +82,22 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/AnimationContainer/ColorRect:modulate")
+tracks/0/path = NodePath("ParallaxBackground:offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Vector2(0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ParallaxBackground:offset")
+tracks/1/path = NodePath("CanvasLayer/AnimationContainer:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/AnimationContainer:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -114,6 +114,7 @@ _data = {
 
 [node name="main_menu" type="Node2D"]
 script = ExtResource("1_okp7i")
+metadata/_edit_group_ = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2(20.25, 20.25)
@@ -158,7 +159,9 @@ offset_right = 60.0
 offset_bottom = 65.0
 color = Color(0.2015, 0.39585, 0.65, 1)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="AnimationContainer" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -184,6 +187,9 @@ offset_top = 56.0
 offset_right = 104.0
 offset_bottom = 96.0
 theme_override_fonts/font = ExtResource("2_77myy")
+placeholder_text = "Enter Name"
+max_length = 10
+expand_to_text_length = true
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/AnimationContainer"]
 modulate = Color(1, 1, 1, 0)
@@ -255,6 +261,7 @@ text = "ADD YOUR NAME"
 libraries = {
 "": SubResource("AnimationLibrary_0xd17")
 }
+autoplay = "Fade In"
 speed_scale = 1.5
 
 [connection signal="pressed" from="CanvasLayer/AnimationContainer/Play" to="." method="_on_play_pressed"]

@@ -1,8 +1,9 @@
-ColorRect
+Camera3D
+Camera2D
 Control
+ColorRect
 Node2D
 Sprite2D
-Camera2D
 ParallaxBackground
 ParallaxLayer
 Label

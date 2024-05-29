@@ -11,8 +11,8 @@ func _process(delta):
 		$Control/Map2/Highscore.text = "Highscore
 		" + Global.map2_highscore_text
 func play_fade_out(map_switch):
-	animation_player.play("Fade Out")
-	await get_tree().create_timer(1).timeout
+	animation_player.play("Back")
+	await get_tree().create_timer($AnimationPlayer.current_animation_length).timeout
 	get_tree().change_scene_to_file("res://Scenes/Maps/Map " + str(map_switch) + "/map_" + str(map_switch) + ".tscn")
 	
 

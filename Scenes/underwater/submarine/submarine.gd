@@ -49,7 +49,6 @@ func _on_area_2d_body_entered(body):
 		await get_tree().create_timer(1.5).timeout
 		world.animation_player.play("Fade out")
 		await get_tree().create_timer(1).timeout
-		RenderingServer.set_default_clear_color(Color(0,0,0))
 		if new_highscore == true:
 			await Leaderboards.post_guest_score("aquarun-map1-fastest-ti-Tov4", Global.map1_highscore, Global.player_name)
 		get_tree().change_scene_to_file("res://Scenes/map_selection/map_selection.tscn")
