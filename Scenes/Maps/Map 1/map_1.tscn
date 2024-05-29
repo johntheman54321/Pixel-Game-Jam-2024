@@ -176,7 +176,7 @@ stream = ExtResource("2_6mxnk")
 pitch_scale = 0.38
 
 [node name="Player" parent="." instance=ExtResource("1_euj3i")]
-position = Vector2(200, -50)
+position = Vector2(10296, 544)
 scale = Vector2(4, 4)
 slide_on_ceiling = false
 floor_block_on_wall = false

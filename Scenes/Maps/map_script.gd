@@ -29,6 +29,7 @@ func restart_game():
 
 func _on_speedtimer_timeout():
 	player.speed = 400
+	secondPlayer.speed = 400
 
 
 func _on_button_2_pressed():
