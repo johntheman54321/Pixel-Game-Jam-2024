@@ -233,6 +233,7 @@ offset_bottom = 648.0
 [node name="LeaderboardUI" parent="Leaderboard" instance=ExtResource("3_ul78g")]
 layout_mode = 1
 leaderboard_id = "aquarun-map1-fastest-ti-Tov4"
+score_limit = 15
 
 [node name="Button" type="Button" parent="Leaderboard/LeaderboardUI"]
 layout_mode = 0

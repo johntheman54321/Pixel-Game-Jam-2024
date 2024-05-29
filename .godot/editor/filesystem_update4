@@ -4,6 +4,4 @@ res://Scenes/underwater/submarine/submarine.tscn
 res://Scenes/Player/player.tscn
 res://Scenes/main_menu/main_menu.tscn
 res://Scenes/DeathScene/deathscreen.tscn
-res://Scenes/map_selection/map_selection.gd
 res://Scenes/underwater/submarine/submarine.gd
-res://Scenes/main_menu/main_menu.gd
