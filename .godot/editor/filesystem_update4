@@ -1,7 +1,11 @@
-res://Scenes/Maps/Map 1/map_1.tscn
 res://Scenes/map_selection/map_selection.tscn
+res://Scenes/Maps/Map 1/map_1.tscn
 res://Scenes/underwater/submarine/submarine.tscn
 res://Scenes/Player/player.tscn
 res://Scenes/main_menu/main_menu.tscn
 res://Scenes/DeathScene/deathscreen.tscn
 res://Scenes/underwater/submarine/submarine.gd
+res://Scenes/map_selection/map_selection.gd
+res://global.gd
+res://Scenes/Player/Player.gd
+res://Scenes/Maps/map_script.gd

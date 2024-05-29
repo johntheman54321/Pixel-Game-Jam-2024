@@ -376,6 +376,16 @@ scale = Vector2(0.6, 0.6)
 position = Vector2(10759, 141)
 scale = Vector2(0.6, 0.6)
 
+[node name="LocalPlayer" parent="." node_paths=PackedStringArray("playerTimer") instance=ExtResource("1_euj3i")]
+position = Vector2(200, 0)
+scale = Vector2(4, 4)
+slide_on_ceiling = false
+floor_block_on_wall = false
+initial_pos = Vector2(200, -50)
+playerTimer = NodePath("../Player/Timer")
+camera_zoom = Vector2(1, 1)
+secondPlayer = true
+
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="restart_game"]
 [connection signal="pressed" from="CanvasLayer/Leave" to="." method="_on_button_2_pressed"]
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

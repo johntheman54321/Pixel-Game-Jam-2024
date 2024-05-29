@@ -172,6 +172,23 @@ theme_override_fonts/font = ExtResource("1_ogesc")
 theme_override_font_sizes/font_size = 40
 metadata/_edit_use_anchors_ = true
 
+[node name="Local Multiplayer" type="Button" parent="Control/Map1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.40625
+anchor_right = -0.0117187
+anchor_bottom = -1.03906
+offset_right = 256.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0, 0.462745, 0.568627, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_ogesc")
+theme_override_font_sizes/font_size = 15
+disabled = true
+text = "Local Multiplayer"
+metadata/_edit_use_anchors_ = true
+
 [node name="Map2" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 550.667
@@ -184,6 +201,25 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_ogesc")
 theme_override_font_sizes/font_size = 60
 text = "MAP 2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Local Multiplayer2" type="Button" parent="Control/Map2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.51172
+anchor_top = -0.40625
+anchor_right = 1.5
+anchor_bottom = -1.03906
+offset_left = -384.0
+offset_right = -128.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0, 0.462745, 0.568627, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_ogesc")
+theme_override_font_sizes/font_size = 15
+disabled = true
+text = "Local Multiplayer"
 metadata/_edit_use_anchors_ = true
 
 [node name="Highscore" type="Label" parent="Control/Map2"]
@@ -242,8 +278,10 @@ offset_bottom = 48.0
 text = "CLOSE"
 
 [connection signal="pressed" from="Control/Map1" to="." method="_on_map_1_pressed"]
-[connection signal="pressed" from="Control/Map2" to="." method="_on_map_2_pressed"]
+[connection signal="pressed" from="Control/Map1/Local Multiplayer" to="." method="_on_local_multiplayer_pressed"]
 [connection signal="pressed" from="Control/Map2" to="." method="play_fade_out"]
+[connection signal="pressed" from="Control/Map2" to="." method="_on_map_2_pressed"]
+[connection signal="pressed" from="Control/Map2/Local Multiplayer2" to="." method="_on_map_1_pressed"]
 [connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Control/Leaderboard" to="." method="_on_leaderboard_pressed"]
 [connection signal="pressed" from="Leaderboard/LeaderboardUI/Button" to="." method="_on_close_pressed"]

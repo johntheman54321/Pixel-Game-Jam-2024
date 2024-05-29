@@ -7,7 +7,4 @@ var map2_highscore_text : String
 var map3_highscore : float = 0
 var map3_highscore_text : String
 var player_name = ""
-
-func _ready():
-	pass
-
+var localMultiplayer = false

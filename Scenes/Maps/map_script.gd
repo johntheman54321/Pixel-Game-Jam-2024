@@ -7,6 +7,10 @@ extends Node2D
 @export var animation_player : AnimationPlayer
 @export var current_map : int
 
+func _ready():
+	if Global.localMultiplayer:
+		$LocalPlayer.visible = true
+
 func _process(delta):
 	if speedtimer.time_left != 0:
 		speed_ui.show()

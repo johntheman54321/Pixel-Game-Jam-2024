@@ -12,10 +12,14 @@ var oxygen = 100
 @export var camera_zoom : Vector2
 var moving = true
 var dir : Vector2
+@export var secondPlayer = false
 
 func _ready():
 	if player_spawn:
 		self.position = initial_pos
+	if secondPlayer:
+		$Camera2D.enabled = false
+		
 	$Camera2D.zoom = camera_zoom
 
 func _physics_process(delta):
