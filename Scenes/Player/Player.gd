@@ -24,7 +24,16 @@ func _ready():
 
 func _physics_process(delta):
 	if moving:
-		dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
+		if not Global.localMultiplayer:
+			dir = Input.get_vector("player1_left", "player1_right", "player1_up", "player1_down").normalized()
+			if dir == Vector2(0, 0):
+				dir = Input.get_vector("player2_left", "player2_right", "player2_up", "player2_down").normalized()
+		else:
+			if secondPlayer:
+				dir = Input.get_vector("player2_left", "player2_right", "player2_up", "player2_down").normalized()
+			else:
+				dir = Input.get_vector("player1_left", "player1_right", "player1_up", "player1_down").normalized()
+
 		position += dir * speed * delta
 	var look_at_cord = (global_position + dir)
 	if dir != Vector2.ZERO:

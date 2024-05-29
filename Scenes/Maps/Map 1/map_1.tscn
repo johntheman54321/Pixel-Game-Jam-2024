@@ -161,9 +161,10 @@ _data = {
 "RESET": SubResource("Animation_np7uj")
 }
 
-[node name="Map 1" type="Node2D" node_paths=PackedStringArray("player", "score_timer", "animation_player")]
+[node name="Map 1" type="Node2D" node_paths=PackedStringArray("player", "secondPlayer", "score_timer", "animation_player")]
 script = ExtResource("1_g7psw")
 player = NodePath("Player")
+secondPlayer = NodePath("LocalPlayer")
 score_timer = NodePath("Timer")
 animation_player = NodePath("AnimationPlayer")
 current_map = 1

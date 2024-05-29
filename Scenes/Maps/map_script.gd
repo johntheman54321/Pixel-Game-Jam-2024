@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var player : CharacterBody2D
+@export var secondPlayer : CharacterBody2D
 @export var score_timer : Timer
 @onready var speedtimer = $objects/speedboosts/speedtimer
 @onready var speed_ui = $CanvasLayer/SpeedTimer
